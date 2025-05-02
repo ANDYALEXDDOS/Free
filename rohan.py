@@ -526,7 +526,7 @@ def handle_help(message):
 /shutdown - [Admin] Stop the bot
 📸 Send screenshot after attack as feedback
 🔥 Join @NEWWCARDER & @CAPTIONKIING to use!
-💎 +1 attack per invite to @CAPTIONKIING after limit or buy unlimited from @bhanu_10m
+💎 +1 attack per invite to @CAPTIONKIING after limit or buy unlimited from @CAPTIONKIING
 """
     bot.reply_to(message, help_text)
 
