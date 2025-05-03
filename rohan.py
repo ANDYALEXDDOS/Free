@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 # Bot configuration
 BOT_USERNAME = "@CAPTIONKINGBOT"
-bot = telebot.TeleBot('7702088012:AAH-5A-X-ohz06pgA9vVRoy1-W3Fo50htLQ')
+bot = telebot.TeleBot('7341365658:AAH8XbVNet9VurMefc-eI64OrYgTHlzgFC0')
 ADMIN_IDS = {"7438914699"}
 CHANNEL_USERNAME = "@CAPTIONKIING"
 FEEDBACK_CHANNEL = "@CAPTIONKING2"
