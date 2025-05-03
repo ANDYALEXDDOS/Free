@@ -933,9 +933,9 @@ def welcome_start(message):
 🌟🔥 **Welcome, {user_name}!** 🔥🌟
 🚀 World's Best DDOS Bot!
 ⚡ Dominate the web!
-🔗 Join: {@CAPTIONKIING}
-💎 Premium: {@NEWWCARDER}
-📞 Help: {@NEWWCARDER[0]}, {CONTACT_ADMINS[1]}
+🔗 Join: {CAPTIONKIING}
+💎 Premium: {NEWWCARDER}
+📞 Help: {NEWWCARDER[0]}, {CONTACT_ADMINS[1]}
 """
     bot.reply_to(message, response)
 
