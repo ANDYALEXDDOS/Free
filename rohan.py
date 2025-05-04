@@ -289,7 +289,7 @@ def reset_user(message):
         bot.reply_to(message, "🚫 Admin only!")
         return
     
-    command = message.text.replace(BOT_USERNAME, "").split()
+    command = message.text.replace(BOT_USERNAME, "@CAPTIONKINGBOT").split()
     if len(command) < 2:
         bot.reply_to(message, "⚠️ Usage: /reset <user_id>")
         return
@@ -495,10 +495,10 @@ def handle_contact(message):
     contact_text = f"""
 📞 **Need Help or Want Premium Access?**  
 🔥 Contact our admins:  
-👤 {CONTACT_ADMINS[0]}  
-👤 {CONTACT_ADMINS[1]}  
+👤 @CAPTIONALEX  
+👤 @NEWWCARDER  
 💎 DM to buy paid bot access for unlimited attacks!  
-🌟 Join {PAID_CHANNEL} for premium features!
+🌟 Join @CAPTIONOFFICIAL for premium features!
 """
     bot.reply_to(message, contact_text)
 
@@ -525,8 +525,8 @@ def handle_help(message):
 /viewusers - [Admin] View all users
 /shutdown - [Admin] Stop the bot
 📸 Send screenshot after attack as feedback
-🔥 Join @NEWWCARDER & @CAPTIONKIING to use!
-💎 +1 attack per invite to @CAPTIONKIING after limit or buy unlimited from @CAPTIONKIING
+🔥 Join @CAPTIONOFFICIAL & @CAPTIONKIING to use!
+💎 +1 attack per invite to @CAPTIONKIING after limit or buy unlimited from @NEWWCARDER
 """
     bot.reply_to(message, help_text)
 
@@ -557,7 +557,7 @@ def handle_attack(message):
         return
 
     if not is_admin and pending_feedback.get(user_id, False):
-        bot.reply_to(message, "😡 Send screenshot first!")
+        bot.reply_to(message, "😡 BETIC#OD JAB EK NE ATTACK KAR RAKHA HAI TO TU KYU KAR RAHA HAI!")
         return
 
     group_attacks.setdefault(group_id, False)
@@ -608,7 +608,7 @@ def handle_attack(message):
         group_attacks[group_id] = False
         return
 
-    profile_photos = bot.get_user_profile_photos(user_id)
+    profile_photos = bot.get_bot_profile_photos(user_id)
     profile_pic = profile_photos.photos[0][-1].file_id if profile_photos.total_count > 0 else None
     
     if not profile_pic:
@@ -731,11 +731,11 @@ def handle_unban(message):
     if not check_private_chat(message, user_id):
         return
     if user_id not in ADMIN_IDS:
-        bot.reply_to(message, "🚫 Admin only!")
+        bot.reply_to(message, "🚫 For Personal BOT DM @NEWWCARDER")
         return
     
     if message.chat.type not in ['group', 'supergroup']:
-        bot.reply_to(message, "🚫 Use in groups only!")
+        bot.reply_to(message, "🚫 FOR PERSONAL BOT DM @NEWWCARDER")
         return
     
     command = message.text.split()
@@ -933,9 +933,9 @@ def welcome_start(message):
 🌟🔥 **Welcome, {user_name}!** 🔥🌟
 🚀 World's Best DDOS Bot!
 ⚡ Dominate the web!
-🔗 Join: {CAPTIONKIING}
-💎 Premium: {NEWWCARDER}
-📞 Help: {NEWWCARDER[0]}, {CONTACT_ADMINS[1]}
+🔗 Join: @CAPTIONKIING
+💎 Premium: @NEWWCARDER
+📞 Help: @NEWWCARDER, @CAPTIONALEX
 """
     bot.reply_to(message, response)
 
