@@ -24,7 +24,7 @@ CONTACT_ADMINS = ["@NEWWCARDER", "@NEWWCARDER"]
 
 # Constants
 COOLDOWN_TIME = 5
-ATTACK_LIMIT = 50
+ATTACK_LIMIT = 25
 MAX_DURATION = 240
 MUTE_DURATION = 86400
 MAX_CONCURRENT_ATTACKS = 4
@@ -39,7 +39,7 @@ INVITE_FILE = "invites.txt"
 
 # Global variables
 user_data = {}
-group_attacks = {}
+group_attacks = {5}
 pending_feedback = {}
 active_attacks = {}
 feedback_photo_ids = set()
@@ -888,7 +888,7 @@ def handle_screenshot(message):
     remaining_attacks = total_allowed_attacks - user_data[user_id]['attacks']
     
     bot.reply_to(message, 
-                 f"✅ Feedback accepted!\n"
+                 f"✅ Feedback DENE KE LIYE SHUKRIYA!\n"
                  f"📸 New screenshot verified.\n"
                  f"⚡ Next attack ready!\n"
                  f"ℹ️ Remaining attacks: {remaining_attacks}")
