@@ -968,3 +968,14 @@ if __name__ == "__main__":
         except Exception as e:
             logger.error(f"Polling error: {e}")
             time.sleep(15)
+
+import telebot
+from telebot.apihelper import ApiTelegramException
+
+try:
+    bot.edit_message_text(new_text, chat_id=chat_id, message_id=message_id)
+except ApiTelegramException as e:
+    if "message is not modified" in str(e):
+        pass  # ignore this error
+    else:
+        raise  # re-raise if it's a different error
